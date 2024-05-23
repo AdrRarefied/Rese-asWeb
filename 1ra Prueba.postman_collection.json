@@ -1,0 +1,239 @@
+{
+	"info": {
+		"_postman_id": "04001dda-029f-4088-b66e-676c4fb9c295",
+		"name": "1ra Prueba",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34222810"
+	},
+	"item": [
+		{
+			"name": "Para video",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Catalogo",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth",
+						"value": "admin",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n\t{\r\n\t\t\"productUUID\": \"47bc9ffc-c05a-4c62-992b-1f1d7fdbafa2\",\r\n\t\t\"amount\": \"2\"\r\n\t}\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/products/cart",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products",
+						"cart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Por Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/products/dea5cf5d-83d6-4454-a3e2-3fcb4e1324ef",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products",
+						"dea5cf5d-83d6-4454-a3e2-3fcb4e1324ef"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar Admin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth",
+						"value": "admin",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"_title\": \"Variable\",\r\n    \"_description\": \"nuevo\",\r\n    \"_imageUrl\": \"https://i.pinimg.com/564x/30/55/fc/3055fc0e79ef0298e25720305dd12c7c.jpg\",\r\n    \"_unit\": \"pieza\",\r\n    \"_stock\": 10,\r\n    \"_pricePerUnit\": 1500,\r\n    \"_category\": \"Mujer\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/admin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar Admin",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth",
+						"value": "admin",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"_title\": \"Variable\",\r\n    \"_description\": \"Modificacion\",\r\n    \"_imageUrl\": \"https://i.pinimg.com/564x/30/55/fc/3055fc0e79ef0298e25720305dd12c7c.jpg\",\r\n    \"_unit\": \"pieza\",\r\n    \"_stock\": 10,\r\n    \"_pricePerUnit\": 1500,\r\n    \"_category\": \"Mujer\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/admin/89fd624f-6709-45e3-8f4c-58e511a3d70f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admin",
+						"89fd624f-6709-45e3-8f4c-58e511a3d70f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminacion",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth",
+						"value": "admin",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/admin/a92c868a-36de-4b44-aab1-20ba7040d778",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admin",
+						"a92c868a-36de-4b44-aab1-20ba7040d778"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Muestra de Html",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/Home",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"Home"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
